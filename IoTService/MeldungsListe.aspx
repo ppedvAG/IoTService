@@ -32,6 +32,7 @@
                 row += '<td>' + message.Datum + '</td>';
                 row += '</tr>';
                 $("#GridView1 tbody").append(row);
+                $("#GridView1").animate({ scrollTop: $('#GridView1').prop("scrollHeight") }, 1000);
 
             });
             connection.start().done(function () {

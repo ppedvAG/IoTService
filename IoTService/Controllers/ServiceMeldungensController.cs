@@ -81,7 +81,7 @@ namespace IoTService.Controllers
 
             db.ServiceMeldungen.Add(serviceMeldungen);
             db.SaveChanges();
-
+            MeldungenHub.AddMeldung(serviceMeldungen.Meldung);
             return CreatedAtRoute("DefaultApi", new { id = serviceMeldungen.Id }, serviceMeldungen);
         }
 
